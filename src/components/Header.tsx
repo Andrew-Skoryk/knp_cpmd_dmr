@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header className="bg-white shadow-sm">
       <div className="container flex items-center justify-between px-4 py-4 mx-auto ">
-        <Link href="/" className="text-2xl font-bold text-primary">
+        <Link href="/" className="max-w-2xl text-2xl font-bold text-primary">
           КОМУНАЛЬНЕ НЕКОМЕРЦІЙНЕ ПІДПРИЄМСТВО «ЦЕНТР ПЕРВИННОЇ МЕДИЧНОЇ
           ДОПОМОГИ» ДОЛИНСЬКОЇ МІСЬКОЇ РАДИ
         </Link>
