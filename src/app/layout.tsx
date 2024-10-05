@@ -1,7 +1,14 @@
 import './globals.css';
 
+import { Lato } from 'next/font/google';
+
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+
+const lato = Lato({
+  weight: "400",
+  subsets: ['latin']
+})
 
 export default function RootLayout({
   children,
@@ -9,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={lato.className}>
       <body>
         <div className="flex flex-col min-h-screen">
           <Header />

@@ -27,34 +27,28 @@ const Header = () => {
           </span>
         </div>
 
-        <nav>
+        <nav className="text-primary">
           <ul className="flex space-x-4">
             <li>
-              <Link href="/" className="text-gray-600 hover:text-primary">
+              <Link href="/" className="hover:text-secondary">
                 Про нас
               </Link>
             </li>
 
             <li>
-              <Link href="/about" className="text-gray-600 hover:text-primary">
-                Про нас
+              <Link href="/about" className="hover:text-primary">
+                Лікарі
               </Link>
             </li>
 
             <li>
-              <Link
-                href="/services"
-                className="text-gray-600 hover:text-primary"
-              >
+              <Link href="/services" className="hover:text-primary">
                 Послуги
               </Link>
             </li>
 
             <li>
-              <Link
-                href="/contact"
-                className="text-gray-600 hover:text-primary"
-              >
+              <Link href="/contact" className="hover:text-primary">
                 Контакти
               </Link>
             </li>
