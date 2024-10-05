@@ -1,10 +1,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+} from '@radix-ui/react-navigation-menu';
 
 const Header = () => {
   return (
-    <header className="bg-white shadow-sm">
-      <div className="container flex items-center justify-between px-4 py-2 mx-auto">
+    <header className="shadow-sm">
+      <div className="container flex items-center justify-between py-2 mx-auto px-28">
         <div className="flex items-center space-x-4">
           <Link href="/">
             <Image
@@ -27,33 +32,27 @@ const Header = () => {
           </span>
         </div>
 
-        <nav className="text-primary">
-          <ul className="flex space-x-4">
-            <li>
-              <Link href="/" className="hover:text-secondary">
-                Про нас
-              </Link>
-            </li>
+        <NavigationMenu className="flex pr-20 space-x-8 list-none">
+          <NavigationMenuItem>
+            <NavigationMenuLink href="/about">Про нас</NavigationMenuLink>
+          </NavigationMenuItem>
 
-            <li>
-              <Link href="/about" className="hover:text-primary">
-                Лікарі
-              </Link>
-            </li>
+          <NavigationMenuItem>
+            <NavigationMenuLink href="/doctors">Лікарі</NavigationMenuLink>
+          </NavigationMenuItem>
 
-            <li>
-              <Link href="/services" className="hover:text-primary">
-                Послуги
-              </Link>
-            </li>
+          <NavigationMenuItem>
+            <NavigationMenuLink href="/">Пацієнтам</NavigationMenuLink>
+          </NavigationMenuItem>
 
-            <li>
-              <Link href="/contact" className="hover:text-primary">
-                Контакти
-              </Link>
-            </li>
-          </ul>
-        </nav>
+          <NavigationMenuItem>
+            <NavigationMenuLink href="/services">Послуги</NavigationMenuLink>
+          </NavigationMenuItem>
+
+          <NavigationMenuItem>
+            <NavigationMenuLink href="/contact">Контакти</NavigationMenuLink>
+          </NavigationMenuItem>
+        </NavigationMenu>
       </div>
     </header>
   );
