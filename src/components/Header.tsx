@@ -6,6 +6,7 @@ import {
   NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
+  NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from './ui/navigation-menu';
@@ -37,37 +38,59 @@ const Header = () => {
         </div>
 
         <NavigationMenu>
-          <NavigationMenuItem>
-            <NavigationMenuLink
-              href="/about"
-              className={navigationMenuTriggerStyle()}
-            >
-              Про нас
-            </NavigationMenuLink>
-          </NavigationMenuItem>
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <Link href="/about" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Про нас
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
 
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Наша команда</NavigationMenuTrigger>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>Наша команда</NavigationMenuTrigger>
 
-            <NavigationMenuContent>
-              <ul className="">
-                <li>Адміністрація</li>
-                <li>Лікарі</li>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
+              <NavigationMenuContent>
+                <ul className="flex flex-col p-2 text-center">
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link href="/">Адміністрація</Link>
+                    </NavigationMenuLink>
+                  </li>
 
-          <NavigationMenuItem>
-            <NavigationMenuLink href="/">Пацієнтам</NavigationMenuLink>
-          </NavigationMenuItem>
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link href="/">лікарі</Link>
+                    </NavigationMenuLink>
+                  </li>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
 
-          <NavigationMenuItem>
-            <NavigationMenuLink href="/services">Послуги</NavigationMenuLink>
-          </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="/" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Пацієнтам
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
 
-          <NavigationMenuItem>
-            <NavigationMenuLink href="/contact">Контакти</NavigationMenuLink>
-          </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="/services" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Послуги
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <Link href="/contact" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Контакти
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+          </NavigationMenuList>
         </NavigationMenu>
       </div>
     </header>
