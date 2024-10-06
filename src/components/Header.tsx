@@ -1,10 +1,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
+
 import {
   NavigationMenu,
+  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
-} from '@radix-ui/react-navigation-menu';
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from './ui/navigation-menu';
 
 const Header = () => {
   return (
@@ -32,13 +36,25 @@ const Header = () => {
           </span>
         </div>
 
-        <NavigationMenu className="flex pr-20 space-x-8 list-none">
+        <NavigationMenu>
           <NavigationMenuItem>
-            <NavigationMenuLink href="/about">Про нас</NavigationMenuLink>
+            <NavigationMenuLink
+              href="/about"
+              className={navigationMenuTriggerStyle()}
+            >
+              Про нас
+            </NavigationMenuLink>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <NavigationMenuLink href="/doctors">Лікарі</NavigationMenuLink>
+            <NavigationMenuTrigger>Наша команда</NavigationMenuTrigger>
+
+            <NavigationMenuContent>
+              <ul className="">
+                <li>Адміністрація</li>
+                <li>Лікарі</li>
+              </ul>
+            </NavigationMenuContent>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
