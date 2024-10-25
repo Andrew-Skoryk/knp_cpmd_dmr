@@ -53,14 +53,20 @@ const Header = () => {
               <NavigationMenuContent>
                 <ul className="flex flex-col p-2 text-center">
                   <li>
-                    <NavigationMenuLink asChild>
-                      <Link href="/">Адміністрація</Link>
+                    <NavigationMenuLink
+                      asChild
+                      className={navigationMenuTriggerStyle()}
+                    >
+                      <Link href="/team/administration">Адміністрація</Link>
                     </NavigationMenuLink>
                   </li>
 
                   <li>
-                    <NavigationMenuLink asChild>
-                      <Link href="/">лікарі</Link>
+                    <NavigationMenuLink
+                      asChild
+                      className={navigationMenuTriggerStyle()}
+                    >
+                      <Link href="/team/doctors">Лікарі</Link>
                     </NavigationMenuLink>
                   </li>
                 </ul>
