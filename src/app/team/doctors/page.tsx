@@ -37,28 +37,27 @@ export default function DoctorsTeamPage() {
     <div>
       <h1>Наші лікарі</h1>
 
-      <div>
+      <div className="grid grid-cols-5 gap-3">
         {doctrorsList.map(
           ({ name, secondName, thirdName, position, workPlace, photo }) => (
-            <Card key={name + secondName}>
+            <Card key={name + secondName} className="text-center">
               <CardHeader>{`${secondName} ${name} ${thirdName}`}</CardHeader>
 
-              <CardContent>
+              <CardContent className="flex flex-col items-center gap-1">
                 <Image
                   src={photo}
                   alt="Фото працівника"
-                  width={150}
-                  height={150}
-                  className="object-contain"
+                  width={200}
+                  height={200}
+                  className="bject-contain "
                 />
 
-                <div>
-                  <CardDescription>{position}</CardDescription>
-                  <span>{workPlace}</span>
-                </div>
+                <CardDescription>{position}</CardDescription>
+
+                <span>{workPlace}</span>
               </CardContent>
 
-              <CardFooter>
+              <CardFooter className="flex flex-col items-center">
                 <Button>Записатись через Askep</Button>
               </CardFooter>
             </Card>
