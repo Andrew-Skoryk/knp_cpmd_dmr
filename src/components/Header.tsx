@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
 
 import {
   NavigationMenu,
@@ -9,7 +9,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from './ui/navigation-menu';
+} from "./ui/navigation-menu";
 
 const Header = () => {
   return (
