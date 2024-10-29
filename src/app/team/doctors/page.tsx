@@ -49,7 +49,7 @@ export default function DoctorsTeamPage() {
                   alt="Фото працівника"
                   width={200}
                   height={200}
-                  className="bject-contain "
+                  className="object-contain"
                 />
 
                 <CardDescription>{position}</CardDescription>
