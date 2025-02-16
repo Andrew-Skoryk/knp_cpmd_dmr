@@ -59,7 +59,7 @@ export default function DoctorsTeamPage() {
                 <span>{workPlace}</span>
               </CardContent>
 
-              <CardFooter className="flex flex-col items-center">
+              <CardFooter className="block mx-auto">
                 <Button>Записатись через Askep</Button>
               </CardFooter>
             </Card>
